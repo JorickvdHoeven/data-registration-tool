@@ -9,47 +9,34 @@ entries:
     - output: web,pdf
       title: Overview
       url: /
-      subfolders:
-      - output: web
-        subfolderitems:
-        - output: web,pdf
-          title: General Tutorial
-          url: tutorial.html
-        - output: web,pdf
-          title: Google Colaboratory
-          url: tutorial_colab.html
-        title: Tutorials
     - output: web,pdf
-      title: A minimal example
-      url: example.html
+      title: core
+      url: /core
     - output: web,pdf
-      title: Export to modules
-      url: export.html
+      title: cli
+      url: /cli
     - output: web,pdf
-      title: Synchronize and diff
-      url: sync.html
+      title: create_environment
+      url: /create_environment
     - output: web,pdf
-      title: Show doc
-      url: showdoc.html
+      title: data_model
+      url: /data_model
     - output: web,pdf
-      title: Convert to html
-      url: export2html.html
+      title: environment
+      url: /environment
     - output: web,pdf
-      title: Extract tests
-      url: test.html
+      title: receipt
+      url: /receipt
     - output: web,pdf
-      title: Fix merge conflicts
-      url: merge.html
+      title: registration
+      url: /registration
     - output: web,pdf
-      title: Command line functions
-      url: cli.html
+      title: verification
+      url: /verification
     - output: web,pdf
-      title: Clean notebooks
-      url: clean.html
-    - output: web,pdf
-      title: Setting up Search
-      url: search.html
+      title: utils
+      url: /utils
     output: web
-    title: nbdev
+    title: drt
   output: web
   title: Sidebar

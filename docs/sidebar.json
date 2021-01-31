@@ -1,21 +1,14 @@
 {
-  "nbdev": {
+  "drt": {
     "Overview": "/",
-    "": {
-    	"Tutorials": {
-    		"General Tutorial":"tutorial.html",
-    		"Google Colaboratory":"tutorial_colab.html"
-    	}
-    },
-    "A minimal example": "example.html",
-    "Export to modules": "export.html",
-    "Synchronize and diff": "sync.html",
-    "Show doc": "showdoc.html",
-    "Convert to html": "export2html.html",
-    "Extract tests": "test.html",
-    "Fix merge conflicts": "merge.html",
-    "Command line functions": "cli.html",
-    "Clean notebooks": "clean.html",
-    "Setting up Search": "search.html"
+    "core": "/core",
+    "cli": "/cli",
+    "create_environment": "/create_environment",
+    "data_model": "/data_model",
+    "environment": "/environment",
+    "receipt": "/receipt",
+    "registration": "/registration",
+    "verification": "/verification",
+    "utils": "/utils"
   }
 }
