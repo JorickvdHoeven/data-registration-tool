@@ -10,32 +10,11 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: core
-      url: /core
+      title: drt
+      url: core.html
     - output: web,pdf
-      title: cli
-      url: /cli
-    - output: web,pdf
-      title: create_environment
-      url: /create_environment
-    - output: web,pdf
-      title: data_model
-      url: /data_model
-    - output: web,pdf
-      title: environment
-      url: /environment
-    - output: web,pdf
-      title: receipt
-      url: /receipt
-    - output: web,pdf
-      title: registration
-      url: /registration
-    - output: web,pdf
-      title: verification
-      url: /verification
-    - output: web,pdf
-      title: utils
-      url: /utils
+      title: Title
+      url: utils.html
     output: web
     title: drt
   output: web

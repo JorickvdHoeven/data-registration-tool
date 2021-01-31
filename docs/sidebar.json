@@ -1,14 +1,7 @@
 {
   "drt": {
     "Overview": "/",
-    "core": "/core",
-    "cli": "/cli",
-    "create_environment": "/create_environment",
-    "data_model": "/data_model",
-    "environment": "/environment",
-    "receipt": "/receipt",
-    "registration": "/registration",
-    "verification": "/verification",
-    "utils": "/utils"
+    "drt": "core.html",
+    "Title": "utils.html"
   }
 }
