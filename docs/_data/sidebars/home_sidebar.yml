@@ -13,6 +13,9 @@ entries:
       title: drt
       url: core.html
     - output: web,pdf
+      title: Command line functions
+      url: cli.html
+    - output: web,pdf
       title: Title
       url: utils.html
     output: web

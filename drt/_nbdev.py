@@ -2,7 +2,12 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"main": "01_cli.ipynb",
+index = {"app": "01_cli.ipynb",
+         "create": "01_cli.ipynb",
+         "register": "01_cli.ipynb",
+         "verify": "01_cli.ipynb",
+         "document": "01_cli.ipynb",
+         "main": "01_cli.ipynb",
          "create_data_model": "02_create_environment.ipynb",
          "create_folders": "02_create_environment.ipynb",
          "create_config": "02_create_environment.ipynb",

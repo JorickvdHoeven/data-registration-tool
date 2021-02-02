@@ -2,6 +2,7 @@
   "drt": {
     "Overview": "/",
     "drt": "core.html",
+    "Command line functions": "cli.html",
     "Title": "utils.html"
   }
 }

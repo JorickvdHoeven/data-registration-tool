@@ -1,13 +1,13 @@
 ---
 
-title: Title
+title: Command line functions
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-
-
+summary: "Below the functions used to call the applicaitons are defined. Functions are grouped into a few main areas, `create`, `register`, `verify`, `document`, `clean` these different areas allow you to perform actions in those domains."
+description: "Below the functions used to call the applicaitons are defined. Functions are grouped into a few main areas, `create`, `register`, `verify`, `document`, `clean` these different areas allow you to perform actions in those domains."
 nb_path: "01_cli.ipynb"
 ---
 <!--
@@ -51,6 +51,21 @@ nb_path: "01_cli.ipynb"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -65,7 +80,138 @@ nb_path: "01_cli.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="main" class="doc_header"><code>main</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/cli.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>main</code>(<strong><code>args</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="create" class="doc_header"><code>create</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/cli.py#L22" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create</code>(<strong><code>location</code></strong>:<code>str</code>=<em><code>'.'</code></em>)</p>
+</blockquote>
+<p>create a new data registration area</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="register" class="doc_header"><code>register</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/cli.py#L35" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register</code>(<strong><code>config_file</code></strong>:<code>Path</code>=<em><code>'.config/config.ini'</code></em>, <strong><code>force</code></strong>:<code>bool</code>=<em><code>False</code></em>)</p>
+</blockquote>
+<p>register any new data elements, run with --force to regeister existing data elements</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="verify" class="doc_header"><code>verify</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/cli.py#L54" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>verify</code>(<strong><code>config_file</code></strong>:<code>Path</code>=<em><code>'.config/config.ini'</code></em>, <strong><code>calc_hash</code></strong>:<code>bool</code>=<em><code>False</code></em>)</p>
+</blockquote>
+<p>verify the data registration environment to determine if there are data elements which need remediating.
+i.e. there is data missing, a report missing, or a script missing.
+this will also check the meta data of the files in the file system against the recorded metadata. If your
+data isn't too big, run this with --calc_hash to activate hash verification.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="document" class="doc_header"><code>document</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/cli.py#L72" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>document</code>(<strong><code>config_file</code></strong>:<code>Path</code>=<em><code>'./config/config.ini'</code></em>, <strong><code>force</code></strong>:<code>bool</code>=<em><code>False</code></em>, <strong><code>sync</code></strong>:<code>bool</code>=<em><code>True</code></em>)</p>
+</blockquote>
+<p>Build documentation based on information in db and provided by analysts</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="main" class="doc_header"><code>main</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/cli.py#L90" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>main</code>()</p>
 </blockquote>
 
 </div>
