@@ -1,4 +1,4 @@
-baseurl: /drt/drt/
+baseurl: /data-remediation-tool/
 collections:
   tooltips:
     output: false
