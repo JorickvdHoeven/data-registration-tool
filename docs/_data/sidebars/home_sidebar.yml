@@ -16,6 +16,12 @@ entries:
       title: Command line functions
       url: cli.html
     - output: web,pdf
+      title: Create Environment
+      url: create_environment.html
+    - output: web,pdf
+      title: Data Model
+      url: data_model.html
+    - output: web,pdf
       title: Title
       url: utils.html
     output: web

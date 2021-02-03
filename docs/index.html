@@ -83,20 +83,22 @@ nb_path: "index.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>usage: drt [-h] {verify,register,create,document} ...
+<pre>Usage: drt [OPTIONS] COMMAND [ARGS]...
 
-Manage the data intake process.
+Options:
+  --install-completion [bash|zsh|fish|powershell|pwsh]
+                                  Install completion for the specified shell.
+  --show-completion [bash|zsh|fish|powershell|pwsh]
+                                  Show completion for the specified shell, to
+                                  copy it or customize the installation.
 
-positional arguments:
-  {verify,register,create,document}
-    verify              Verify an existing data intake folder
-    register            Register new deliveries and datasets
-    create              Create a new data intake folder
-    document            Build documentation based on information in db and
-                        provided by analysts
+  --help                          Show this message and exit.
 
-optional arguments:
-  -h, --help            show this help message and exit
+Commands:
+  create    create a new data registration area
+  document  Build documentation based on information in db and provided by...
+  register  register any new data elements, run with --force to regeister...
+  verify    verify the data registration environment to determine if there...
 </pre>
 </div>
 </div>

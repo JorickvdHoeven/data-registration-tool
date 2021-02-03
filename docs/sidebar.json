@@ -3,6 +3,8 @@
     "Overview": "/",
     "drt": "core.html",
     "Command line functions": "cli.html",
+    "Create Environment": "create_environment.html",
+    "Data Model": "data_model.html",
     "Title": "utils.html"
   }
 }

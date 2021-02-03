@@ -3,9 +3,6 @@
 __all__ = ['create_data_model', 'create_folders', 'create_config', 'create_environment']
 
 # Cell
-'''
-    Code to create a new environment with an associated config file.
-'''
 
 import sqlalchemy as db
 from pathlib import Path
@@ -13,7 +10,7 @@ import shutil
 import configparser
 import drt.data_model as dm
 
-
+# Cell
 def create_data_model( file_name:str = None, location:Path = None):
     """
     Creates an SQLite database with the appropriate tables for use in
@@ -28,11 +25,6 @@ def create_data_model( file_name:str = None, location:Path = None):
 
     location : Path, optional
         Location where to save the db file, by default current working directory
-
-    Example
-    -------
-    >>> from pathlib import Path
-    >>> create_data_model('testing', Path('/var/tmp/'))
     """
     if location is None:
         location = Path.cwd()
@@ -57,8 +49,7 @@ def create_data_model( file_name:str = None, location:Path = None):
 
     return db_path
 
-# %%
-
+# Cell
 def create_folders(location:Path=None):
     """
     Create the folder structure to accept data. Also populate a
@@ -69,10 +60,6 @@ def create_folders(location:Path=None):
     ----------
     location : Path, optional
         The location where to create the folder structure, by default current working directory
-
-    Example
-    -------
-    >>> create_folders(Path('/var/tmp'))
     """
     if location is None:
         location = Path.cwd()
@@ -96,8 +83,7 @@ def create_folders(location:Path=None):
         'datasets': (location / dataset),
     }
 
-# %%
-
+# Cell
 def create_config(location:Path, db_path:Path, folders:dict) -> Path:
     """
     Create a new default configuration file with the paths set to the
@@ -113,10 +99,6 @@ def create_config(location:Path, db_path:Path, folders:dict) -> Path:
 
     folders : dict
         Dictionary with the folder paths for 'delivery', 'raw', and 'datasets'
-
-    Example
-    -------
-    >>> create_config(Path('/var/tmp/'))
     """
     if location is None:
         location = Path.cwd()
@@ -150,9 +132,7 @@ def create_config(location:Path, db_path:Path, folders:dict) -> Path:
 
     return (location / '.config' / 'config.ini')
 
-
-# %%
-
+# Cell
 def create_environment(location:Path = None) -> Path:
     """
     Stands up a data intake environment at the given location.
@@ -177,4 +157,3 @@ def create_environment(location:Path = None) -> Path:
     folders = create_folders(location=location)
 
     return create_config(location, db_path, folders)
-
