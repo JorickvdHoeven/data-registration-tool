@@ -45,7 +45,7 @@ modules = ["cli.py",
            "verification.py",
            "utils.py"]
 
-doc_url = "https://JorickvdHoeven.github.io/drt/drt/"
+doc_url = "https://JorickvdHoeven.github.io/data-registration-tool/"
 
 git_url = "https://github.com/JorickvdHoeven/drt/tree/master/"
 
