@@ -1,4 +1,4 @@
-baseurl: /data-remediation-tool/
+baseurl: /data-registration-tool/
 collections:
   tooltips:
     output: false
@@ -40,7 +40,7 @@ plugins:
 - jekyll-remote-theme
 port: 4000
 remote_theme: fastai/nbdev-jekyll-theme
-repository: JorickvdHoeven/data-remediation-tool
+repository: JorickvdHoeven/data-registration-tool
 sidebars:
 - home_sidebar
 site_title: data-registration-tool
