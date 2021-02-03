@@ -1,4 +1,4 @@
-baseurl: /
+baseurl: /data-registration-tool/
 collections:
   tooltips:
     output: false
