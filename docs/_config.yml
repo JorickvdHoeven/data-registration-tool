@@ -43,6 +43,6 @@ remote_theme: fastai/nbdev-jekyll-theme
 repository: JorickvdHoeven/drt
 sidebars:
 - home_sidebar
-site_title: drt
-topnav_title: drt
+site_title: data-registration-tool
+topnav_title: data-registration-tool
 use_math: true
