@@ -40,7 +40,7 @@ plugins:
 - jekyll-remote-theme
 port: 4000
 remote_theme: fastai/nbdev-jekyll-theme
-repository: JorickvdHoeven/drt
+repository: JorickvdHoeven/data-remediation-tool
 sidebars:
 - home_sidebar
 site_title: data-registration-tool
