@@ -65,7 +65,7 @@ nb_path: "06_registration.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="extract_delivery_from_script" class="doc_header"><code>extract_delivery_from_script</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L21" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>extract_delivery_from_script</code>(<strong><code>env</code></strong>:<a href="/drt/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>)</p>
+<h4 id="extract_delivery_from_script" class="doc_header"><code>extract_delivery_from_script</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L21" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>extract_delivery_from_script</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>)</p>
 </blockquote>
 <p>TODO:
 [summary]</p>
@@ -98,7 +98,7 @@ nb_path: "06_registration.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="register_data_group" class="doc_header"><code>register_data_group</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L75" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register_data_group</code>(<strong><code>env</code></strong>:<a href="/drt/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>, <strong><code>group_type</code></strong>:<code>Union</code>[<a href="/drt/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/drt/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/drt/data_model.html#Dataset"><code>Dataset</code></a>], <strong><code>record</code></strong>:<code>Union</code>[<a href="/drt/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/drt/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/drt/data_model.html#Dataset"><code>Dataset</code></a>]=<em><code>None</code></em>)</p>
+<h4 id="register_data_group" class="doc_header"><code>register_data_group</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L75" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register_data_group</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>, <strong><code>group_type</code></strong>:<code>Union</code>[<a href="/data-registration-tool/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tool/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tool/data_model.html#Dataset"><code>Dataset</code></a>], <strong><code>record</code></strong>:<code>Union</code>[<a href="/data-registration-tool/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tool/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tool/data_model.html#Dataset"><code>Dataset</code></a>]=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Register a single data group to the database.</p>
 <h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>env : DataIntakeEnv
@@ -137,7 +137,7 @@ nb_path: "06_registration.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="register_data_folder" class="doc_header"><code>register_data_folder</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L145" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register_data_folder</code>(<strong><code>env</code></strong>:<a href="/drt/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>group_type</code></strong>:<code>Union</code>[<a href="/drt/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/drt/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/drt/data_model.html#Dataset"><code>Dataset</code></a>], <strong><code>force</code></strong>:<code>bool</code>=<em><code>False</code></em>)</p>
+<h4 id="register_data_folder" class="doc_header"><code>register_data_folder</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L145" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register_data_folder</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>group_type</code></strong>:<code>Union</code>[<a href="/data-registration-tool/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tool/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tool/data_model.html#Dataset"><code>Dataset</code></a>], <strong><code>force</code></strong>:<code>bool</code>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Scans a folder containing data groups and registers them if they
 don't already exist in the database.</p>
@@ -176,7 +176,7 @@ don't already exist in the database.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="register_all" class="doc_header"><code>register_all</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L213" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register_all</code>(<strong><code>env</code></strong>:<a href="/drt/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>)</p>
+<h4 id="register_all" class="doc_header"><code>register_all</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/registration.py#L213" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>register_all</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>)</p>
 </blockquote>
 <p>Register all new data groups in the data intake process environment.
 This on purpose, ignores In_Progress and . files.</p>
