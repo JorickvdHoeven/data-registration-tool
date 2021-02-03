@@ -1,5 +1,5 @@
 {
-  "data-registration-tool": {
+  "drt": {
     "Overview": "/",
     "drt": "core.html",
     "Command line functions": "cli.html",
