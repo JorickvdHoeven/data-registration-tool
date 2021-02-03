@@ -1,13 +1,13 @@
 ---
 
-title: Title
+title: Receipt
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-
-
+summary: "Generate ReST formatted data stubs for each data element which can be used as a base for a statically generated site and/or updated by users to correct information. In particular, these receipts are where analysts will be able to enter details about the data elements."
+description: "Generate ReST formatted data stubs for each data element which can be used as a base for a statically generated site and/or updated by users to correct information. In particular, these receipts are where analysts will be able to enter details about the data elements."
 nb_path: "05_receipt.ipynb"
 ---
 <!--
@@ -33,31 +33,6 @@ nb_path: "05_receipt.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
-<span class="o">%</span><span class="k">autoreload</span> 2
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
@@ -65,17 +40,16 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="sync_data_folder" class="doc_header"><code>sync_data_folder</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sync_data_folder</code>(<strong><code>env</code></strong>:<a href="/data-registration-toolenvironment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>data_group_type</code></strong>:<code>Union</code>[<a href="/data-registration-tooldata_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tooldata_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tooldata_model.html#Dataset"><code>Dataset</code></a>])</p>
+<h4 id="sync_data_folder" class="doc_header"><code>sync_data_folder</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L18" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sync_data_folder</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>data_group_type</code></strong>:<code>Union</code>[<a href="/data-registration-tool/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tool/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tool/data_model.html#Dataset"><code>Dataset</code></a>])</p>
 </blockquote>
 <p>TODO
 [summary]</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>env : DataIntakeEnv
+<h5 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h5><p>env : DataIntakeEnv
     [description]</p>
 <p>data_group_type : Data_Groups_Type
     [description]</p>
-<h2 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h2><p>TypeError
+<h5 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h5><p>TypeError
     [description]</p>
-<h2 id="Example">Example<a class="anchor-link" href="#Example"> </a></h2><p>[&gt;&gt;&gt; example_usage_of_module in pydoctest]</p>
 
 </div>
 
@@ -91,6 +65,13 @@ nb_path: "05_receipt.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -98,19 +79,18 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="sync_data_group" class="doc_header"><code>sync_data_group</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L52" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sync_data_group</code>(<strong><code>env</code></strong>:<a href="/data-registration-toolenvironment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>data_group</code></strong>:<code>Path</code>)</p>
+<h4 id="sync_data_group" class="doc_header"><code>sync_data_group</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sync_data_group</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>data_group</code></strong>:<code>Path</code>)</p>
 </blockquote>
 <p>TODO
 [summary]</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>env : [type]
+<h5 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h5><p>env : [type]
     [description]</p>
 <p>data_group : Path
     [description]</p>
 <p>data_group_type : str
     [description]</p>
-<h2 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h2><p>TypeError
+<h5 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h5><p>TypeError
     [description]</p>
-<h2 id="Example">Example<a class="anchor-link" href="#Example"> </a></h2><p>[&gt;&gt;&gt; example_usage_of_module in pydoctest]</p>
 
 </div>
 
@@ -126,6 +106,13 @@ nb_path: "05_receipt.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -133,19 +120,18 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="sync_receipt" class="doc_header"><code>sync_receipt</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L89" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sync_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-toolenvironment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>receipt_path</code></strong>:<code>Path</code>, <strong><code>data_group</code></strong>:<code>Union</code>[<a href="/data-registration-tooldata_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tooldata_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tooldata_model.html#Dataset"><code>Dataset</code></a>])</p>
+<h4 id="sync_receipt" class="doc_header"><code>sync_receipt</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L80" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sync_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>receipt_path</code></strong>:<code>Path</code>, <strong><code>data_group</code></strong>:<code>Union</code>[<a href="/data-registration-tool/data_model.html#Delivery"><code>Delivery</code></a>, <a href="/data-registration-tool/data_model.html#Raw_Data"><code>Raw_Data</code></a>, <a href="/data-registration-tool/data_model.html#Dataset"><code>Dataset</code></a>])</p>
 </blockquote>
 <p>TODO
 [summary]</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>env : DataIntakeEnv
+<h5 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h5><p>env : DataIntakeEnv
     [description]</p>
 <p>receipt_path : Path
     [description]</p>
 <p>data_group : Union[dm.Dataset, dm.Delivery, dm.Raw_Data]
     [description]</p>
-<h2 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h2><p>TypeError
+<h5 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h5><p>TypeError
     [description]</p>
-<h2 id="Example">Example<a class="anchor-link" href="#Example"> </a></h2><p>[&gt;&gt;&gt; example_usage_of_module in pydoctest]</p>
 
 </div>
 
@@ -161,6 +147,13 @@ nb_path: "05_receipt.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -168,18 +161,17 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="write_receipt" class="doc_header"><code>write_receipt</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L141" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>write_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-toolenvironment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>)</p>
+<h4 id="write_receipt" class="doc_header"><code>write_receipt</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L126" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>write_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>)</p>
 </blockquote>
 <p>Create a receipt for a data group based on information from the sqlite database.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>env : DataIntakeEnv
+<h5 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h5><p>env : DataIntakeEnv
     The data registration environment</p>
 <p>folder : Path
     Folder path to the Data Group to create a receipt for.</p>
 <p>group_type : str
     What type of data group is this data element.</p>
-<h2 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h2><p>TypeError
+<h5 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h5><p>TypeError
     Raised if the data group type is not correct</p>
-<h2 id="Example">Example<a class="anchor-link" href="#Example"> </a></h2><p>[&gt;&gt;&gt; example_usage_of_module in pydoctest]</p>
 
 </div>
 
@@ -195,6 +187,13 @@ nb_path: "05_receipt.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -202,19 +201,18 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="parse_receipt" class="doc_header"><code>parse_receipt</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L183" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-toolenvironment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>receipt_path</code></strong>:<code>Path</code>)</p>
+<h4 id="parse_receipt" class="doc_header"><code>parse_receipt</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/receipt.py#L162" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>receipt_path</code></strong>:<code>Path</code>)</p>
 </blockquote>
 <p>TODO
 [summary]</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>receipt_path : Path
+<h5 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h5><p>receipt_path : Path
     [description]</p>
 <p>group_type : str
     [description]</p>
-<h2 id="Returns">Returns<a class="anchor-link" href="#Returns"> </a></h2><p>dict
+<h5 id="Returns">Returns<a class="anchor-link" href="#Returns"> </a></h5><p>dict
     [description]</p>
-<h2 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h2><p>TypeError
+<h5 id="Raises">Raises<a class="anchor-link" href="#Raises"> </a></h5><p>TypeError
     [description]</p>
-<h2 id="Example">Example<a class="anchor-link" href="#Example"> </a></h2><p>[&gt;&gt;&gt; example_usage_of_module in pydoctest]</p>
 
 </div>
 

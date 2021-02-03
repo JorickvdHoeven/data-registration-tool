@@ -3,11 +3,8 @@
 __all__ = ['DataIntakeEnv']
 
 # Cell
-'''
-This module contains the code to maintain the application state. It is
-initialized at the scripts first run and contains information about where
-data is as well as accessor functions to access information in the database.
-'''
+#export
+
 import configparser
 from pathlib import Path
 import pandas as pd
@@ -17,14 +14,11 @@ from sqlalchemy.orm import sessionmaker
 import drt.data_model as dm
 from .utils import Data_Groups_Type
 
+# Cell
 class DataIntakeEnv():
     """
     TODO
     [summary]
-
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
     def __init__(self, config_file:str):
         config = self.load_config(config_file)
@@ -72,21 +66,15 @@ class DataIntakeEnv():
         If this function is unable to load the config file it will raise
         a FileExistsError
 
-        Parameters
-        ----------
+        ##### Parameters
         config_file : str
             The path to the configuration file
 
 
-        Returns
-        -------
+        ##### Returns
         Dict
             A dictionary containing the PATHS and FLAGS sections of the config
             file.
-
-        Example
-        -------
-        [>>> example_usage_of_module in pydoctest]
         """
         cfg = configparser.ConfigParser()
         d = dict()
@@ -121,22 +109,17 @@ class DataIntakeEnv():
         Returns a DataFrame containing the data for a whole data group list.
         !!! Potential to remove this, it seems like a useless abstraction.
 
-        Parameters
-        ----------
+        ##### Parameters
         list_name : str
             This is the name of the list to retrieve this can be either:
             - delivery
             - raw_data
             - dataset
 
-        Returns
-        -------
+        ##### Returns
         list
             A list of dm.Data_Group descendant objects
 
-        Example
-        -------
-        [>>> example_usage_of_module in pydoctest]
         """
 
         return self.session.query(data_group).all()
@@ -171,76 +154,3 @@ class DataIntakeEnv():
             return dm.Dataset
         else:
             raise ValueError("Unable to determine type from path", path, data_group_folder)
-
-
-
-    # def get_data_group(name, type) -> dict:
-    #     """
-    #     Method that returns the data group and the data group's linked
-    #     files.
-
-    #     Parameters
-    #     ----------
-    #     name : [type]
-    #         [description]
-
-    #     type : [type]
-    #         [description]
-
-
-    #     Returns
-    #     -------
-    #     dict
-    #         [description]
-
-    #     Raises
-    #     ------
-    #     NotImplementedError
-    #         [description]
-
-    #     Example
-    #     -------
-    #     [>>> example_usage_of_module in pydoctest]
-    #     """
-    #     raise NotImplementedError
-
-    # def update_data_group(name, type, id) -> bool:
-    #     """
-    #     Method that takes a data group object and persists it to the
-    #     database
-
-    #     Parameters
-    #     ----------
-    #     name : [type]
-    #         [description]
-
-    #     type : [type]
-    #         [description]
-
-    #     id : [type]
-    #         [description]
-
-
-    #     Returns
-    #     -------
-    #     bool
-    #         [description]
-
-    #     Raises
-    #     ------
-    #     NotImplementedError
-    #         [description]
-
-    #     Example
-    #     -------
-    #     [>>> example_usage_of_module in pydoctest]
-    #     """
-    #     raise NotImplementedError
-
-
-
-
-
-
-
-

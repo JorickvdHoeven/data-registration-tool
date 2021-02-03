@@ -5,6 +5,10 @@
     "Command line functions": "cli.html",
     "Create Environment": "create_environment.html",
     "Data Model": "data_model.html",
-    "Title": "utils.html"
+    "Environment": "environment.html",
+    "Receipt": "receipt.html",
+    "Registration": "registration.html",
+    "Verification": "verification.html",
+    "Utility scripts": "utils.html"
   }
 }

@@ -3,6 +3,7 @@
 __all__ = ['sync_data_folder', 'sync_data_group', 'sync_receipt', 'write_receipt', 'parse_receipt']
 
 # Cell
+#export
 from pathlib import Path
 import drt.data_model as dm
 import re
@@ -13,28 +14,23 @@ from sqlalchemy import inspect
 from typing import Union
 from .utils import Data_Groups_Type
 
-
+# Cell
 def sync_data_folder(env: DataIntakeEnv, data_group_type: Data_Groups_Type):
     """
     TODO
     [summary]
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         [description]
 
     data_group_type : Data_Groups_Type
         [description]
 
-    Raises
-    ------
+    ##### Raises
     TypeError
         [description]
 
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
     if data_group_type == dm.Delivery:
         data_folder = env.delivery_folder
@@ -48,14 +44,13 @@ def sync_data_folder(env: DataIntakeEnv, data_group_type: Data_Groups_Type):
     for data_group in data_folder.iterdir():
         sync_data_group(env, data_group)
 
-
+# Cell
 def sync_data_group(env: DataIntakeEnv, data_group: Path):
     """
     TODO
     [summary]
 
-    Parameters
-    ----------
+    ##### Parameters
     env : [type]
         [description]
 
@@ -66,14 +61,10 @@ def sync_data_group(env: DataIntakeEnv, data_group: Path):
         [description]
 
 
-    Raises
-    ------
+    ##### Raises
     TypeError
         [description]
 
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
 
     data_group_type = env.get_group_type_from_path(data_group)
@@ -85,14 +76,13 @@ def sync_data_group(env: DataIntakeEnv, data_group: Path):
         else:
             print(f'[!] record not found for {data_group.name}, can''t sync')
 
-
+# Cell
 def sync_receipt(env: DataIntakeEnv, receipt_path: Path, data_group: Data_Groups_Type):
     """
     TODO
     [summary]
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         [description]
 
@@ -103,14 +93,10 @@ def sync_receipt(env: DataIntakeEnv, receipt_path: Path, data_group: Data_Groups
         [description]
 
 
-    Raises
-    ------
+    ##### Raises
     TypeError
         [description]
 
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
 
     receipt_data = parse_receipt(env, receipt_path)
@@ -136,14 +122,12 @@ def sync_receipt(env: DataIntakeEnv, receipt_path: Path, data_group: Data_Groups
     print(f"Writing receipt to {receipt_path.parent}")
     write_receipt(env, receipt_path.parent)
 
-
-
+# Cell
 def write_receipt(env: DataIntakeEnv, folder: Path):
     """
     Create a receipt for a data group based on information from the sqlite database.
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         The data registration environment
 
@@ -154,14 +138,10 @@ def write_receipt(env: DataIntakeEnv, folder: Path):
         What type of data group is this data element.
 
 
-    Raises
-    ------
+    ##### Raises
     TypeError
         Raised if the data group type is not correct
 
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
 
     dg = env.get_group_type_from_path(folder)
@@ -178,15 +158,13 @@ def write_receipt(env: DataIntakeEnv, folder: Path):
             print(folder.name, folder_info, dg)
             raise e
 
-
-
+# Cell
 def parse_receipt(env: DataIntakeEnv, receipt_path: Path) -> dict:
     """
     TODO
     [summary]
 
-    Parameters
-    ----------
+    ##### Parameters
     receipt_path : Path
         [description]
 
@@ -194,19 +172,14 @@ def parse_receipt(env: DataIntakeEnv, receipt_path: Path) -> dict:
         [description]
 
 
-    Returns
-    -------
+    ##### Returns
     dict
         [description]
 
-    Raises
-    ------
+    ##### Raises
     TypeError
         [description]
 
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
     text = receipt_path.read_text()
 
@@ -241,4 +214,3 @@ def parse_receipt(env: DataIntakeEnv, receipt_path: Path) -> dict:
                 data[k] = parser.parse(data[k])
 
     return data
-

@@ -31,10 +31,10 @@ index = {"app": "01_cli.ipynb",
          "register_data_folder": "06_registration.ipynb",
          "register_all": "06_registration.ipynb",
          "check_datagroup": "07_verification.ipynb",
+         "Data_Groups_Type": "99_utils.ipynb",
          "hash_files": "99_utils.ipynb",
          "process_data_group": "99_utils.ipynb",
-         "count_data_group_components": "99_utils.ipynb",
-         "Data_Groups_Type": "99_utils.ipynb"}
+         "count_data_group_components": "99_utils.ipynb"}
 
 modules = ["cli.py",
            "create_environment.py",
@@ -47,6 +47,6 @@ modules = ["cli.py",
 
 doc_url = "https://JorickvdHoeven.github.io/data-registration-tool/"
 
-git_url = "https://github.com/JorickvdHoeven/drt/tree/master/"
+git_url = "https://github.com/JorickvdHoeven/data-registration-tool/tree/master/"
 
 def custom_doc_links(name): return None

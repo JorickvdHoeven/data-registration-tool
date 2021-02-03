@@ -3,13 +3,14 @@
 __all__ = ['check_datagroup']
 
 # Cell
+#export
 from tqdm import tqdm
 from .environment import DataIntakeEnv
 import drt.data_model as dm
 import drt.utils as utils
 from .utils import Data_Groups_Type
 
-
+# Cell
 def check_datagroup(env:DataIntakeEnv,
                     data_group_type: Data_Groups_Type,
                     light:bool = True) -> None:
@@ -21,8 +22,7 @@ def check_datagroup(env:DataIntakeEnv,
         - Have all the data groups in the folder had their descriptions and origin updated?
         - Warning if a registered delivery is missing
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
 
     data_group_type : Data_Groups_Type
@@ -30,11 +30,6 @@ def check_datagroup(env:DataIntakeEnv,
 
     light : bool, optional
         Skip file hashing in the comparison
-
-    Example
-    -------
-    TODO
-    [>>> example_usage_of_module in pydoctest]
     """
     if data_group_type == dm.Delivery:
         data_folder = env.delivery_folder

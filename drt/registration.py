@@ -3,11 +3,6 @@
 __all__ = ['extract_delivery_from_script', 'register_data_group', 'register_data_folder', 'register_all']
 
 # Cell
-"""
-Module to contain all data registration code. If other methods need to be used
-this module will call out to them such as utility functions to gather folder
-metadata or document generation functions.
-"""
 from re import L
 from .environment import DataIntakeEnv
 import drt.utils as utils
@@ -18,13 +13,13 @@ from pathlib import Path
 from typing import Union
 from .utils import Data_Groups_Type
 
+# Cell
 def extract_delivery_from_script(env:DataIntakeEnv, folder:Path) -> str:
     """
     TODO:
     [summary]
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         [description]
 
@@ -32,14 +27,10 @@ def extract_delivery_from_script(env:DataIntakeEnv, folder:Path) -> str:
         [description]
 
 
-    Returns
-    -------
+    ##### Returns
     str
         [description]
 
-    Example
-    -------
-    [>>> example_usage_of_module in pydoctest]
     """
     # load script data
     # get all registered delivery names
@@ -72,12 +63,12 @@ def extract_delivery_from_script(env:DataIntakeEnv, folder:Path) -> str:
     else:
         return sources[0]
 
+# Cell
 def register_data_group(env:DataIntakeEnv, folder:Path, group_type: Data_Groups_Type, record: Data_Groups_Type = None):
     """
     Register a single data group to the database.
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         The application environment settings.
 
@@ -90,14 +81,10 @@ def register_data_group(env:DataIntakeEnv, folder:Path, group_type: Data_Groups_
     record : dm.Data_Group, optional
         If this is a pre-existing record and you have it provide it here, by default None
 
-    Raises
-    ------
+    ##### Raises
     TypeError
         group_type must be one of ['delivery', 'raw_data', 'dataset']
 
-    Example
-    -------
-    >>> register_data_group(env, Path(/users/data/01_delivery/2020_11_01_test_Data),'delivery')
     """
     dg = group_type
     if not record:
@@ -142,13 +129,13 @@ def register_data_group(env:DataIntakeEnv, folder:Path, group_type: Data_Groups_
 
     return True
 
+# Cell
 def register_data_folder(env:DataIntakeEnv, group_type: Data_Groups_Type, force:bool = False):
     """
     Scans a folder containing data groups and registers them if they
     don't already exist in the database.
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         The environment with data intake process pathnames.
 
@@ -159,14 +146,10 @@ def register_data_folder(env:DataIntakeEnv, group_type: Data_Groups_Type, force:
         If we force we ignore the current data and regenerate all stats. This will
         overwrite previous stats.
 
-    Raises
-    ------
+    ##### Raises
     ValueError
         The right type must be passed.
 
-    Example
-    -------
-    >>> register_data_folder(env, 'delivery')
     """
     # get folder list, if not delivery folder then skip "In_Progress_*"
     if group_type == dm.Delivery:
@@ -210,18 +193,16 @@ def register_data_folder(env:DataIntakeEnv, group_type: Data_Groups_Type, force:
             rct.sync_data_group(env, folder)
             rct.write_receipt(env, folder)
 
+
+# Cell
 def register_all(env:DataIntakeEnv):
     """
     Register all new data groups in the data intake process environment.
     This on purpose, ignores In_Progress and . files.
 
-    Parameters
-    ----------
+    ##### Parameters
     env : DataIntakeEnv
         The data intake process environment to scan and register new data groups.
 
-    Example
-    -------
-    >>> register_all(env)
     """
     [ register_data_folder(env, i, env.force_recalculate) for i in [dm.Delivery, dm.Raw_Data, dm.Dataset] ]

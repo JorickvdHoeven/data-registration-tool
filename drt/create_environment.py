@@ -3,7 +3,7 @@
 __all__ = ['create_data_model', 'create_folders', 'create_config', 'create_environment']
 
 # Cell
-
+#export
 import sqlalchemy as db
 from pathlib import Path
 import shutil
@@ -18,8 +18,7 @@ def create_data_model( file_name:str = None, location:Path = None):
 
     This will not destroy a pre-existing database file.
 
-    Parameters
-    ----------
+    ##### Parameters
     file_name : str, optional
         Name of the database file defaults to 'intake_db'
 
@@ -56,8 +55,7 @@ def create_folders(location:Path=None):
     helpful readme with instructions on how to use the data intake
     process.
 
-    Parameters
-    ----------
+    ##### Parameters
     location : Path, optional
         The location where to create the folder structure, by default current working directory
     """
@@ -89,8 +87,7 @@ def create_config(location:Path, db_path:Path, folders:dict) -> Path:
     Create a new default configuration file with the paths set to the
     default paths.
 
-    Parameters
-    ----------
+    ##### Parameters
     location : Path
         Location of data intake project
 
@@ -137,15 +134,9 @@ def create_environment(location:Path = None) -> Path:
     """
     Stands up a data intake environment at the given location.
 
-    Parameters
-    ----------
+    ##### Parameters
     location : Path, optional
         Location to create the environment, defaults to current working directory.
-
-
-    Example
-    -------
-    >>> create_environment(Path('/var/tmp'))
     """
 
     if location is None:

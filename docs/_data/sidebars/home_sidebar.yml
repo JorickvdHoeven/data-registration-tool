@@ -22,7 +22,19 @@ entries:
       title: Data Model
       url: data_model.html
     - output: web,pdf
-      title: Title
+      title: Environment
+      url: environment.html
+    - output: web,pdf
+      title: Receipt
+      url: receipt.html
+    - output: web,pdf
+      title: Registration
+      url: registration.html
+    - output: web,pdf
+      title: Verification
+      url: verification.html
+    - output: web,pdf
+      title: Utility scripts
       url: utils.html
     output: web
     title: drt
