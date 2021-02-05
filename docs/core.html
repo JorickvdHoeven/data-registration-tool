@@ -108,7 +108,6 @@ nb_path: "00_core.ipynb"
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">DataIntakeEnv</span><span class="p">(</span><span class="n">test_path</span> <span class="o">/</span> <span class="s1">&#39;.config&#39;</span> <span class="o">/</span> <span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
 <span class="n">register_all</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
-<span class="c1"># shutil.rmtree(test_path)</span>
 </pre></div>
 
     </div>
@@ -121,7 +120,7 @@ nb_path: "00_core.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>                                        </pre>
+<pre>  0%|          | 0/3 [00:00&lt;?, ?files/s]</pre>
 </div>
 </div>
 
@@ -136,7 +135,7 @@ nb_path: "00_core.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre></pre>
+<pre>                                        </pre>
 </div>
 </div>
 
@@ -154,6 +153,8 @@ nb_path: "00_core.ipynb"
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">check_datagroup</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">group_type</span><span class="p">,</span> <span class="n">light</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">group_type</span> <span class="ow">in</span> <span class="p">[</span><span class="n">dm</span><span class="o">.</span><span class="n">Delivery</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">Raw_Data</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]]</span>
+
+<span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">test_path</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -202,7 +203,7 @@ nb_path: "00_core.ipynb"
   0%|          | 0/3 [00:00&lt;?, ?files/s]
                                         
   0%|          | 0/3 [00:00&lt;?, ?files/s]
-                                             </pre>
+                                             </pre>
 </div>
 </div>
 
@@ -255,13 +256,6 @@ nb_path: "00_core.ipynb"
 [DAT] 2020_02_04_asteroid_metal_mass missing description
 [DAT] 2020_02_04_asteroid_metal_mass missing dataset data sheet
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre></pre>
 </div>
 </div>
 
