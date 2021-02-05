@@ -1,0 +1,6 @@
+os.stat_result(st_mode=33188, st_ino=46229629, st_dev=16777220, st_nlink=1, st_uid=503, st_gid=20, st_size=261292, st_atime=1612486769, st_mtime=1612485526, st_ctime=1612485644)
+os.stat_result(st_mode=33188, st_ino=46229827, st_dev=16777220, st_nlink=1, st_uid=503, st_gid=20, st_size=150816, st_atime=1612486769, st_mtime=1612485553, st_ctime=1612485640)
+os.stat_result(st_mode=33188, st_ino=46229395, st_dev=16777220, st_nlink=1, st_uid=503, st_gid=20, st_size=1526792, st_atime=1612486769, st_mtime=1612485494, st_ctime=1612485652)
+os.stat_result(st_mode=33188, st_ino=46229674, st_dev=16777220, st_nlink=1, st_uid=503, st_gid=20, st_size=104822, st_atime=1612486769, st_mtime=1612485539, st_ctime=1612485642)
+os.stat_result(st_mode=33188, st_ino=46229448, st_dev=16777220, st_nlink=1, st_uid=503, st_gid=20, st_size=218700, st_atime=1612486769, st_mtime=1612485504, st_ctime=1612485646)
+os.stat_result(st_mode=33188, st_ino=46229417, st_dev=16777220, st_nlink=1, st_uid=503, st_gid=20, st_size=228808, st_atime=1612486769, st_mtime=1612485498, st_ctime=1612485649)
