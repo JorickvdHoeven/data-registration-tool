@@ -40,7 +40,7 @@ nb_path: "03_data_model.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h3 id="BaseModel" class="doc_header"><code>class</code> <code>BaseModel</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/data_model.py#L15" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>BaseModel</code>()</p>
+<h3 id="BaseModel" class="doc_header"><code>class</code> <code>BaseModel</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/data_model.py#L15" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>BaseModel</code>()</p>
 </blockquote>
 <p>Base model to allow for a more verbose representation of model objects.</p>
 
@@ -72,7 +72,7 @@ nb_path: "03_data_model.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h3 id="Tag" class="doc_header"><code>class</code> <code>Tag</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/data_model.py#L46" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Tag</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Base"><code>Base</code></a></p>
+<h3 id="Tag" class="doc_header"><code>class</code> <code>Tag</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/data_model.py#L46" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Tag</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Base"><code>Base</code></a></p>
 </blockquote>
 <p>Table containing tags to be used in the application to tag data groups. This will allow
 certain data groups to be tagged with values for easier retrieval and grouping when
@@ -106,7 +106,7 @@ organising the data groups.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h3 id="Data_Group" class="doc_header"><code>class</code> <code>Data_Group</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/data_model.py#L63" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Data_Group</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Base"><code>Base</code></a></p>
+<h3 id="Data_Group" class="doc_header"><code>class</code> <code>Data_Group</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/data_model.py#L63" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Data_Group</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Base"><code>Base</code></a></p>
 </blockquote>
 <p>The base data group table. This contains all of the common columns which exist for all
 data groups. Each row is 1-1 bound with a row in any of the Delivery, Raw_Data, or Dataset
@@ -142,7 +142,7 @@ ORM mapping pattern called Joined Table Inheritance mapping:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h3 id="Delivery" class="doc_header"><code>class</code> <code>Delivery</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/data_model.py#L102" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Delivery</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Data_Group"><code>Data_Group</code></a></p>
+<h3 id="Delivery" class="doc_header"><code>class</code> <code>Delivery</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/data_model.py#L102" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Delivery</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Data_Group"><code>Data_Group</code></a></p>
 </blockquote>
 <p>Table containing Delivery data group type specific columns. Links to the
 Data_Group table as it's parent table.
@@ -176,7 +176,7 @@ Objects instantiated with this class will contain all the columns.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h3 id="Raw_Data" class="doc_header"><code>class</code> <code>Raw_Data</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/data_model.py#L142" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Raw_Data</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Data_Group"><code>Data_Group</code></a></p>
+<h3 id="Raw_Data" class="doc_header"><code>class</code> <code>Raw_Data</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/data_model.py#L142" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Raw_Data</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Data_Group"><code>Data_Group</code></a></p>
 </blockquote>
 <p>Table with raw data group type specific columns. Links to the
 Data_Group table as it's parent table.
@@ -210,7 +210,7 @@ Objects instantiated with this class will contain all the columns.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h3 id="Dataset" class="doc_header"><code>class</code> <code>Dataset</code><a href="https://github.com/JorickvdHoeven/drt/tree/master/drt/data_model.py#L183" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Dataset</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Data_Group"><code>Data_Group</code></a></p>
+<h3 id="Dataset" class="doc_header"><code>class</code> <code>Dataset</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/data_model.py#L183" class="source_link" style="float:right">[source]</a></h3><blockquote><p><code>Dataset</code>(<strong>**<code>kwargs</code></strong>) :: <a href="/data-registration-tool/data_model.html#Data_Group"><code>Data_Group</code></a></p>
 </blockquote>
 <p>Table with dataset group type specific columns. Links to the
 Data_Group table as it's parent table.

@@ -9,6 +9,7 @@
     "Receipt": "receipt.html",
     "Registration": "registration.html",
     "Verification": "verification.html",
-    "Utility scripts": "utils.html"
+    "Utility scripts": "utils.html",
+    "Title": "02_04_movie_titles.html"
   }
 }

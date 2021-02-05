@@ -36,6 +36,9 @@ entries:
     - output: web,pdf
       title: Utility scripts
       url: utils.html
+    - output: web,pdf
+      title: Title
+      url: 02_04_movie_titles.html
     output: web
     title: drt
   output: web

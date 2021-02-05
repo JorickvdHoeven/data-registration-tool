@@ -54,6 +54,233 @@ nb_path: "00_core.ipynb"
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_test_folder</span><span class="p">(</span><span class="n">test_path</span><span class="p">:</span><span class="n">Path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a folder in a location with dummy data ready to be registered</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">test_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">test_path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">test_path</span><span class="p">)</span>
+    <span class="n">create_environment</span><span class="p">(</span><span class="n">test_path</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">drt</span><span class="p">,</span> <span class="s1">&#39;test_files&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">test</span><span class="p">:</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">((</span><span class="n">test</span><span class="o">/</span><span class="s1">&#39;01_Delivery&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">test_path</span> <span class="o">/</span> <span class="s1">&#39;01_Delivery&#39;</span><span class="p">),</span><span class="n">dirs_exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">((</span><span class="n">test</span><span class="o">/</span><span class="s1">&#39;02_RAW&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">test_path</span> <span class="o">/</span> <span class="s1">&#39;02_RAW&#39;</span><span class="p">),</span><span class="n">dirs_exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">((</span><span class="n">test</span><span class="o">/</span><span class="s1">&#39;03_Datasets&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">test_path</span> <span class="o">/</span> <span class="s1">&#39;03_Datasets&#39;</span><span class="p">),</span><span class="n">dirs_exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;test_env&#39;</span><span class="p">)</span>
+<span class="n">create_test_folder</span><span class="p">(</span><span class="n">test_path</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">DataIntakeEnv</span><span class="p">(</span><span class="n">test_path</span> <span class="o">/</span> <span class="s1">&#39;.config&#39;</span> <span class="o">/</span> <span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
+<span class="n">register_all</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
+<span class="c1"># shutil.rmtree(test_path)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>                                        </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[!] test_env/01_Delivery/2020_01_13_no structure not processed, empty or non-existent
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">check_datagroup</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="n">group_type</span><span class="p">,</span> <span class="n">light</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">for</span> <span class="n">group_type</span> <span class="ow">in</span> <span class="p">[</span><span class="n">dm</span><span class="o">.</span><span class="n">Delivery</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">Raw_Data</span><span class="p">,</span> <span class="n">dm</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>  0%|          | 0/7 [00:00&lt;?, ?data group/s]
+  0%|          | 0/1 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/4 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/1 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/1 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/6 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/1 [00:00&lt;?, ?files/s]
+  0%|          | 0/9 [00:00&lt;?, ?data group/s]
+  0%|          | 0/2 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/8 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+  0%|          | 0/4 [00:00&lt;?, ?data group/s]        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                        
+  0%|          | 0/3 [00:00&lt;?, ?files/s]
+                                             </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[DLV] Registered data missing files or empty folder at test_env/01_Delivery/2020_01_13_no structure
+[DLV] 2020_01_10_iris_csv missing description
+[DLV] 2020_01_10_iris_csv missing source
+[DLV] 2020_01_10_iris_csv missing delivery date
+[DLV] 2020_01_11_dump missing description
+[DLV] 2020_01_11_dump missing source
+[DLV] 2020_01_11_dump missing delivery date
+[DLV] No Data registered for: 2020_01_13_no structure
+[DLV] 2020_01_09_near_earth_json missing description
+[DLV] 2020_01_09_near_earth_json missing source
+[DLV] 2020_01_09_near_earth_json missing delivery date
+[DLV] 2020_01_12_missing_source missing description
+[DLV] 2020_01_12_missing_source missing source
+[DLV] 2020_01_12_missing_source missing delivery date
+[DLV] 2020_01_08_video_files missing description
+[DLV] 2020_01_08_video_files missing source
+[DLV] 2020_01_08_video_files missing delivery date
+[DLV] 2020_01_10_measurements_excel missing description
+[DLV] 2020_01_10_measurements_excel missing source
+[DLV] 2020_01_10_measurements_excel missing delivery date
+[RAW] No Data registered for: In_Progress_2020_01_13_no structure
+[RAW] 2020_02_03_iris_versicolor missing description
+[RAW] 2020_02_03_iris_versicolor missing statistics report
+[RAW] 2020_02_02_iris_versicolor missing description
+[RAW] 2020_02_02_iris_versicolor missing statistics report
+[RAW] 2020_02_03_missing_source missing description
+[RAW] 2020_02_03_missing_source missing statistics report
+[RAW] 2020_02_01_rick_roll_videos missing description
+[RAW] 2020_02_01_rick_roll_videos missing statistics report
+[RAW] 2020_02_02_metal_measurements missing description
+[RAW] 2020_02_02_metal_measurements missing statistics report
+[RAW] 2020_02_01_near_earth_objects missing description
+[RAW] 2020_02_01_near_earth_objects missing statistics report
+[RAW] 2020_02_03_netflix_titles missing description
+[RAW] 2020_02_03_netflix_titles missing statistics report
+[RAW] 2020_02_02_temperature_mass_measurements missing description
+[RAW] 2020_02_02_temperature_mass_measurements missing statistics report
+[DAT] Registered data missing files or empty folder at test_env/03_Datasets/In_Progress_2020_02_04_rick_rolling
+[DAT] 2020_02_04_iris_versicolor missing description
+[DAT] 2020_02_04_iris_versicolor missing dataset data sheet
+[DAT] No Data registered for: In_Progress_2020_02_04_rick_rolling
+[DAT] 2020_02_04_movie_titles missing description
+[DAT] 2020_02_04_movie_titles missing dataset data sheet
+[DAT] 2020_02_04_asteroid_metal_mass missing description
+[DAT] 2020_02_04_asteroid_metal_mass missing dataset data sheet
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre></pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[None, None, None]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
