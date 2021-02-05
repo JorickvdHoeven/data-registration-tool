@@ -40,6 +40,7 @@ plugins:
 - jekyll-remote-theme
 port: 4000
 remote_theme: fastai/nbdev-jekyll-theme
+# remote_theme: carlosperate/jekyll-theme-rtd
 repository: JorickvdHoeven/data-registration-tool
 sidebars:
 - home_sidebar
