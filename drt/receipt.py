@@ -196,10 +196,12 @@ def parse_receipt(env: DataIntakeEnv, receipt_path: Path) -> dict:
     elif group_type == dm.Raw_Data:
         # extract data with these regexes
         patterns['description'] = re.compile(r'Description:\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
+        patterns['statistics_report'] = re.compile(r'Report\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
         pass
     elif group_type == dm.Dataset:
         # extract data with these regexes
         patterns['description'] = re.compile(r'Description:\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
+        patterns['datastet_report'] = re.compile(r'Report\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
         pass
     else:
         raise TypeError
