@@ -4,7 +4,7 @@ __all__ = ['check_datagroup']
 
 # Cell
 #export
-from tqdm import tqdm
+from tqdm.auto import tqdm
 from .environment import DataIntakeEnv
 import drt.data_model as dm
 import drt.utils as utils
@@ -56,7 +56,7 @@ def check_datagroup(env:DataIntakeEnv,
         data_groups = [
             fil
             for fil in data_folder.iterdir()
-            if fil.is_dir() and not fil.name.startswith(".") and not fil.name.lower().startswith('in_progresss')
+            if fil.is_dir() and not fil.name.startswith(".") and not fil.name.lower().startswith('in_progress')
         ]
 
     # Loop through all the directories in the deliveries folder to process
@@ -68,7 +68,7 @@ def check_datagroup(env:DataIntakeEnv,
         try:
             data = utils.process_data_group(data_group, data_group_type, light)
         except FileNotFoundError as e:
-            print(f"[{err_str}] Registered data missing files or empty folder at {data_group}")
+            errors.append(f"[{err_str}] Registered data missing files or empty folder at {data_group}")
 
         # Get the delivery record
         record = env.session.query(data_group_type).filter_by(name=data_group.name).first()
@@ -112,6 +112,6 @@ def check_datagroup(env:DataIntakeEnv,
         errors.append(f"[{err_str}] {item.name} registered but no data")
 
     ## TODO WRITE REPORT OUTPUT HERE
-    print("\n".join(errors))
+    tqdm.write("\n".join(errors))
 
-    return None
+    return errors

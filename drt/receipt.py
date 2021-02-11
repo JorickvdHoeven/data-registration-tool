@@ -108,6 +108,10 @@ def sync_receipt(env: DataIntakeEnv, receipt_path: Path, data_group: Data_Groups
             data_group.date_received = v
         elif k == 'delivery_source':
             data_group.delivery_source = v
+        elif k == 'statistics_report':
+            data_group.statistics_report = v
+        elif k == 'dataset_report':
+            data_group.dataset_report = v
 
     env.session.commit()
 
@@ -196,12 +200,12 @@ def parse_receipt(env: DataIntakeEnv, receipt_path: Path) -> dict:
     elif group_type == dm.Raw_Data:
         # extract data with these regexes
         patterns['description'] = re.compile(r'Description:\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
-        patterns['statistics_report'] = re.compile(r'Report\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
+        patterns['statistics_report'] = re.compile(r'Report\n-+\n(.*?)\n.*', re.MULTILINE | re.DOTALL)
         pass
     elif group_type == dm.Dataset:
         # extract data with these regexes
         patterns['description'] = re.compile(r'Description:\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
-        patterns['datastet_report'] = re.compile(r'Report\n-+\n(.*?)\n+[^\n]+\n-+\n', re.MULTILINE | re.DOTALL)
+        patterns['dataset_report'] = re.compile(r'Report\n-+\n(.*?)\n.*', re.MULTILINE | re.DOTALL)
         pass
     else:
         raise TypeError

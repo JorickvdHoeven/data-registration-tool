@@ -10,8 +10,8 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: drt
-      url: core.html
+      title: Tests
+      url: tests.html
     - output: web,pdf
       title: Command line functions
       url: cli.html

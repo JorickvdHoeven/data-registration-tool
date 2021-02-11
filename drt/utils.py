@@ -8,7 +8,7 @@ __all__ = ['Data_Groups_Type', 'hash_files', 'process_data_group', 'count_data_g
 from pathlib import Path
 from typing import List
 import hashlib
-from tqdm import tqdm
+from tqdm.auto import tqdm
 from datetime import datetime
 import pandas as pd
 import numpy as np

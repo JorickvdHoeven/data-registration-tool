@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"app": "01_cli.ipynb",
+index = {"create_test_folder": "00_tests.ipynb",
+         "app": "01_cli.ipynb",
          "create": "01_cli.ipynb",
          "register": "01_cli.ipynb",
          "verify": "01_cli.ipynb",
@@ -36,7 +37,8 @@ index = {"app": "01_cli.ipynb",
          "process_data_group": "99_utils.ipynb",
          "count_data_group_components": "99_utils.ipynb"}
 
-modules = ["cli.py",
+modules = ["tests.py",
+           "cli.py",
            "create_environment.py",
            "data_model.py",
            "environment.py",

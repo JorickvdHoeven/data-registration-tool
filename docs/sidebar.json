@@ -1,7 +1,7 @@
 {
   "drt": {
     "Overview": "/",
-    "drt": "core.html",
+    "Tests": "tests.html",
     "Command line functions": "cli.html",
     "Create Environment": "create_environment.html",
     "Data Model": "data_model.html",

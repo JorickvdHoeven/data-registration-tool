@@ -161,7 +161,7 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="write_receipt" class="doc_header"><code>write_receipt</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/receipt.py#L126" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>write_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>)</p>
+<h4 id="write_receipt" class="doc_header"><code>write_receipt</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/receipt.py#L130" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>write_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>folder</code></strong>:<code>Path</code>)</p>
 </blockquote>
 <p>Create a receipt for a data group based on information from the sqlite database.</p>
 <h5 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h5><p>env : DataIntakeEnv
@@ -201,7 +201,7 @@ nb_path: "05_receipt.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="parse_receipt" class="doc_header"><code>parse_receipt</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/receipt.py#L162" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>receipt_path</code></strong>:<code>Path</code>)</p>
+<h4 id="parse_receipt" class="doc_header"><code>parse_receipt</code><a href="https://github.com/JorickvdHoeven/data-registration-tool/tree/master/drt/receipt.py#L166" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parse_receipt</code>(<strong><code>env</code></strong>:<a href="/data-registration-tool/environment.html#DataIntakeEnv"><code>DataIntakeEnv</code></a>, <strong><code>receipt_path</code></strong>:<code>Path</code>)</p>
 </blockquote>
 <p>TODO
 [summary]</p>
@@ -227,6 +227,57 @@ nb_path: "05_receipt.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span> 
+
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+
+
+<span class="s1">File Metadata</span>
+<span class="s1">-------------</span>
+<span class="s1">:Files Last Changed: 2021-02-10 20:32:52.637435</span>
+<span class="s1">:File Size: 1244762</span>
+<span class="s1">:Number of Files: 3</span>
+<span class="s1">:Hash: 975bd61edb1adec7b61b8fb459de04e775d286bcc5cd19a4be67c74c04044e46</span>
+
+<span class="s1">Report</span>
+<span class="s1">------</span>
+<span class="s1">Dummy HTML Report</span>
+
+
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Report\n-+\n(.*?)\n.*&#39;</span><span class="p">,</span><span class="n">text</span><span class="p">,</span>  <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Dummy HTML Report&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
     {% endraw %}
